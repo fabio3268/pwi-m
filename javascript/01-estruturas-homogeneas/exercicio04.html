@@ -1,0 +1,17 @@
+<script>
+  var elementos = [];
+  var elementosPares = [];
+  var soma = 0;
+  var ii = 0;
+  for(i = 0; i <= 5; i++){
+      elementos[i] = Number(window.prompt("Digite um valor: "));
+      soma = soma + elementos[i];
+      if(elementos[i] % 2 == 0){
+          elementosPares[ii] = elementos[i];
+          ii++;
+      }
+  }
+  console.log(elementos);
+  console.log(elementosPares);
+  console.log(soma);
+</script>

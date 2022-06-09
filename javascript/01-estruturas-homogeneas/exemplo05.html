@@ -1,0 +1,26 @@
+<script>
+    var boletim = [
+        [9,7,6.5],
+        [9.8,9,8.5]
+    ];
+    console.log(boletim);
+    console.table(boletim);
+
+    console.log(boletim[1][2]);
+
+    boletim[1][2] = 10;
+
+    console.table(boletim);
+    console.log(boletim[0]);
+
+    //document.write(boletim[0][0] + "<br>");
+    //document.write(boletim[0][1] + "<br>");
+    //document.write(boletim[0][2] + "<br>");
+
+    for(l = 0; l <= 1; l++){
+        for (c = 0; c <= 2; c++){
+            document.write(boletim[l][c] + " ");
+        }
+        document.write("<br>");
+    }
+</script>

@@ -1,0 +1,26 @@
+<script>
+
+var arr = [];
+arr.push(5);
+arr.push(15);
+arr.push(20,30,50);
+
+console.log(arr);
+
+var achei = false;
+for(i=0; i<arr.length; i++){
+    if(arr[i] == 22){
+        achei = true;
+    }
+}
+
+if(achei == false){
+    document.write("Nãooooo Acheiiiiiii!");
+} else {
+    document.write("Acheiiiiiii!");
+}
+
+console.log(arr.indexOf(100));
+
+
+</script>

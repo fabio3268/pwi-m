@@ -1,4 +1,10 @@
 document.querySelector('h1').innerHTML = "Selecionando por Nome da tag";
-document.querySelector('#subtitle').innerHTML = "Selecionando pelos ID";
-document.querySelector(".title").innerHTML = "Selecionando pela classe";
-document.querySelector(".inside").innerHTML = "Selecionado vários! Ooops!";
+document.querySelector('h2').innerHTML = "Olá, INF-2AM!";
+document.querySelector('h3').innerHTML = "Aula maravilhosa!";
+document.querySelector('#subtitle').innerHTML = "Aula com o prof. Fábio!";
+
+document.querySelector('.title').innerHTML = "Mais um título...";
+
+document.querySelector('.inside.a').innerHTML = "Item 1";
+document.querySelector('.inside.b').innerHTML = "Item 2";
+document.querySelector('.inside.c').innerHTML = "Item 3";

@@ -16,9 +16,13 @@ console.log(mySpan);
 
 myDiv.insertAdjacentElement("afterbegin",mySpan);
 
-const myLi01 = document.createElement("li");
-myLi01.innerHTML = "Item 1";
-myLi01.id = "content";
-console.log(myLi01);
+const nro = window.prompt("Digite valor: ");
+for(let i = 0; i < nro; i++){
+    mySpan.insertAdjacentHTML("afterend",`<li id="content">${nro - i} - Item</li>`);
+}
 
-mySpan.insertAdjacentElement("afterend",myLi01);
+//const myLi01 = document.createElement("li");
+//myLi01.innerHTML = "Item 1";
+//myLi01.id = "content";
+//console.log(myLi01);
+//mySpan.insertAdjacentElement("afterend",myLi01);

@@ -1,0 +1,11 @@
+var myH1 = document.createElement("h1");
+myH1.textContent = "Disciplinas";
+var myBody = document.querySelector("body");
+myBody.insertAdjacentElement("afterbegin",myH1);
+var myBox = document.createElement("div");
+myBox.setAttribute("id","box");
+myBody.insertAdjacentElement("beforeend",myBox);
+var mySpan = document.createElement("span");
+mySpan.textContent = "Informática";
+mySpan.setAttribute("id","title");
+myBox.insertAdjacentElement("afterbegin",mySpan);

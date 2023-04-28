@@ -6,7 +6,7 @@
 
 const myArray = [1,2,3,4,30,29,289,292,276];
 
-console.log(myArray);
+console.table(myArray);
 console.log(myArray.length);
 console.log(myArray[0]);
 console.log(myArray[1]);

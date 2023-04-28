@@ -1,7 +1,5 @@
 
 
-
-
 let arrayNumbers = [];
 let randonNumber;
 

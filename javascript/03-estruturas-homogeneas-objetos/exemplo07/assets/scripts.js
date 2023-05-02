@@ -22,6 +22,12 @@ const employeesArrayObj = [
         lastName: 'Oliveira',
         age: 21,
         salary: 2345.67
+    },
+    {
+        name: 'Antônio',
+        lastName: 'Martins',
+        age: 16,
+        salary: 5000.67
     }
 ];
 //console.log(employeesArrayObj);

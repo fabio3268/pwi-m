@@ -1,5 +1,6 @@
-const itemsMenu = ["Home", "Quem Somos", "Serviços", "Portfólio", "Contato","Localização"];
-
+// vetor da primeira parte
+const itemsMenu = ["Home", "Quem Somos", "Serviços", "Portfólio"];
+// vetor de objetos da segunda parte
 let intemsArrayObj = [
     {
         menu : "Home",

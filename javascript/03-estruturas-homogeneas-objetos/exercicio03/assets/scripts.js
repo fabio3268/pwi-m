@@ -6,7 +6,7 @@ let intemsArrayObj = [
         menu : "Home",
         h1 : "Título para Home",
         p : "Texto para o parágrafo da Home",
-        image : "assets/images/home.png"
+        image : "assets/images/home.png",
     },
     {
         menu : "Quem Somos",
@@ -24,6 +24,12 @@ let intemsArrayObj = [
         menu : "Portfólio",
         h1 : "Título para Portfólio",
         p : "Texto para o parágrafo da Portfólio.",
+        image: "assets/images/portifolio.png"
+    },
+    {
+        menu : "Contato",
+        h1 : "Título para Contato",
+        p : "Texto para o parágrafo da Contato.",
         image: "assets/images/portifolio.png"
     }];
 

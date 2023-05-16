@@ -1,4 +1,4 @@
-# Exercício 02
+# Exercício 09
 
 - considere que você possui um vetor de objetos representando diferentes livros em uma biblioteca, onde cada objeto possui propriedades como título, autor e status de empréstimo;
 - percorra o vetor de objetos exibindo seu conteúdo à direita;

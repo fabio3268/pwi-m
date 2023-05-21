@@ -1,5 +1,4 @@
-# Exercício 10
+# Exercício 11
 
-- considere que você possui um vetor de objetos representando diferentes livros em uma biblioteca, onde cada objeto possui propriedades como título, autor e status de empréstimo;
-- percorra o vetor de objetos exibindo seu conteúdo em cards (estilos no .css);
-- utilize a função setAttribute para trocar a class da div conforme status do livro
+Considerando os inputs id="description" e id="price" e o botão "Cadastrar Produto":
+- adicione um evento click no botão, o mesmo deve adicionar um objeto com os valores dos inputs description e price no vetor de objetos productsList;

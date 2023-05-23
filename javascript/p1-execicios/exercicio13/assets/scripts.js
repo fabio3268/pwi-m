@@ -51,10 +51,10 @@ const tasksList = [
     }
 ];
 
-const divTasks = document.querySelector("#task-list");
+const divTaskList = document.querySelector("#task-list");
 
-function listTaskCreator (){
-    for (let i in tasksList){
+function createListTask () {
+    for(let i in tasksList){
         //console.log(tasksList[i].description, tasksList[i].status);
         let divTask = document.createElement("div");
         divTask.setAttribute("class","task");
@@ -63,32 +63,35 @@ function listTaskCreator (){
         <span class="description">${tasksList[i].description}</span>
     `;
         let buttonDelete = document.createElement("button");
-        buttonDelete.setAttribute("class","delete-btn");
-        divTasks.insertAdjacentElement("beforeend",divTask);
         buttonDelete.textContent = "Excluir";
-        buttonDelete.addEventListener("click", () => {
-            buttonDelete.parentElement.remove();
+        buttonDelete.setAttribute("class","delete-btn");
+        buttonDelete.addEventListener("click",(e) => {
+            //console.log();
+            e.target.parentElement.remove();
         });
+        divTaskList.insertAdjacentElement("beforeend",divTask);
         divTask.insertAdjacentElement("beforeend",buttonDelete);
     }
 }
 
-listTaskCreator();
+createListTask();
 
-const buttonInsert = document.querySelector("#add-task-btn");
 
-function insertTask (){
-    const description = document.querySelector("#task-description");
-    const status = document.querySelector("#task-status");
+const addTaskButton = document.querySelector("#add-task-btn");
+const selectStatus = document.querySelector("#task-status");
+const inputDescription = document.querySelector("#task-description");
+
+function insertTask () {
+    console.log(selectStatus.value, inputDescription.value);
     let taskObj = {
-        description: description.value,
-        status: status.value,
-        creationDate: "26/05"
+        description: inputDescription.value,
+        status: selectStatus.value,
+        creationDate: "02/05"
     };
     tasksList.push(taskObj);
-    divTasks.innerHTML = "";
-    listTaskCreator();
     console.table(tasksList);
+    divTaskList.innerHTML = "";
+    createListTask();
 }
 
-buttonInsert.addEventListener("click",insertTask);
+addTaskButton.addEventListener("click",insertTask);

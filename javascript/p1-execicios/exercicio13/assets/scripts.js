@@ -51,3 +51,22 @@ const tasksList = [
     }
 ];
 
+const divTasks = document.querySelector("#task-list");
+
+for (let i in tasksList){
+    console.log(tasksList[i].description, tasksList[i].status);
+    let divTask = document.createElement("div");
+    divTask.setAttribute("class","task");
+    divTask.innerHTML = `
+        <span class="status">${tasksList[i].status}</span>
+        <span class="description">${tasksList[i].description}</span>
+    `;
+    let buttonDelete = document.createElement("button");
+    buttonDelete.setAttribute("class","delete-btn");
+    divTasks.insertAdjacentElement("beforeend",divTask);
+    buttonDelete.textContent = "Excluir";
+    buttonDelete.addEventListener("click", () => {
+        buttonDelete.parentElement.remove();
+    });
+    divTask.insertAdjacentElement("beforeend",buttonDelete);
+}

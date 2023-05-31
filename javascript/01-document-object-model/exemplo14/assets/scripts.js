@@ -12,5 +12,21 @@ const plans = [
 ];
 
 const listPlans = document.querySelectorAll(".box");
-console.log(listPlans);
+//console.log(listPlans[0]);
+listPlans.forEach((divPlan,i) => {
+    //console.log(plans[i]);
+    divPlan.innerHTML = `
+    <div class="name">${plans[i].name}</div>
+        <div class="price">${plans[i].price}</div>
+        <div class="active">${plans[i].description}</div>
+    `;
+});
 
+listPlans.forEach((div) => {
+    console.log(div);
+    div.addEventListener("click", (e) => {
+        console.log(e.target);
+        e.target.innerHTML = "oi";
+        //e.target.remove();
+    });
+});

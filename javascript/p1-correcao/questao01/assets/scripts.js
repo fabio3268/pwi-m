@@ -42,4 +42,25 @@ const studentsList = [
 ];
 
 
+const tableStudents = document.querySelector("tbody");
+
+studentsList.forEach((student) => {
+   //console.log(student);
+   let tr = document.createElement("tr");
+   tr.innerHTML = `<td>${student.name}</td><td>${student.grade}</td>`;
+   tableStudents.insertAdjacentElement("beforeend",tr);
+});
+
+const buttonAverage = document.querySelector("#calculate-average");
+buttonAverage.addEventListener("click",() => {
+    console.log("oi");
+    let sum = 0;
+    studentsList.forEach((student) => {
+        console.log(student.grade);
+        sum = sum + parseFloat(student.grade);
+    });
+    console.log(`Média das notas ${sum / studentsList.length}`);
+    document.querySelector("#average-div").textContent =
+        `${sum / studentsList.length}`;
+});
 

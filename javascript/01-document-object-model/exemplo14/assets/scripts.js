@@ -21,15 +21,23 @@ listPlans.forEach((divPlan,i) => {
         <div class="description">${plans[i].description}</div>
     `;
 
-    divPlan.addEventListener('click', () => {
+    document.querySelectorAll(".box").forEach((div) => {
+        if(div.classList.contains("active")){
+            div.classList.remove("active");
+        }
+        div.addEventListener("click",() => {
+            div.classList.add("active");
+        });
+    });
+
+   /* divPlan.addEventListener('click', () => {
         document.querySelectorAll('.box').forEach(t => {
             if (t != divPlan && t.classList.contains('active')){
                 t.classList.remove('active');
             }
         });
         divPlan.classList.add('active');
-    });
-
+    });*/
 
 });
 
@@ -41,3 +49,5 @@ listPlans.forEach((divPlan,i) => {
         //e.target.remove();
     });
 });*/
+
+

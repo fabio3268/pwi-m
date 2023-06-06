@@ -18,15 +18,26 @@ listPlans.forEach((divPlan,i) => {
     divPlan.innerHTML = `
     <div class="name">${plans[i].name}</div>
         <div class="price">${plans[i].price}</div>
-        <div class="active">${plans[i].description}</div>
+        <div class="description">${plans[i].description}</div>
     `;
+
+    divPlan.addEventListener('click', () => {
+        document.querySelectorAll('.box').forEach(t => {
+            if (t != divPlan && t.classList.contains('active')){
+                t.classList.remove('active');
+            }
+        });
+        divPlan.classList.add('active');
+    });
+
+
 });
 
-listPlans.forEach((div) => {
+/*listPlans.forEach((div) => {
     console.log(div);
     div.addEventListener("click", (e) => {
         console.log(e.target);
         e.target.innerHTML = "oi";
         //e.target.remove();
     });
-});
+});*/

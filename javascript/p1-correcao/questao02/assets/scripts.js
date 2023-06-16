@@ -55,3 +55,39 @@ const moviesList = [
     }
 ];
 
+
+const movieList = document.querySelector(".movie-list");
+
+moviesList.forEach((film) => {
+    let divFilm = document.createElement("div");
+    //divFilm.setAttribute("class","movie-card");
+    divFilm.classList.add("movie-card");
+    divFilm.innerHTML = `
+    <img src="${film.image}" alt="The Matrix">
+            <div class="movie-title">${film.title}</div>
+            <div class="movie-genre">Ficção</div>
+            <div class="movie-year">1999</div>
+    `;
+    movieList.insertAdjacentElement("beforeend",divFilm);
+});
+
+const changeSelect = document.querySelector("#genre-select");
+changeSelect.addEventListener("change", (e) => {
+    //console.log(e.target.value);
+    movieList.innerHTML = "";
+    moviesList.forEach((film) => {
+        console.log(e.target.value, film.genre);
+        if(film.genre == e.target.value || e.target.value == 'Todos'){
+            let divFilm = document.createElement("div");
+            //divFilm.setAttribute("class","movie-card");
+            divFilm.classList.add("movie-card");
+            divFilm.innerHTML = `
+                <img src="${film.image}" alt="The Matrix">
+                <div class="movie-title">${film.title}</div>
+                <div class="movie-genre">Ficção</div>
+                <div class="movie-year">1999</div>
+            `;
+            movieList.insertAdjacentElement("beforeend",divFilm);
+        }
+    });
+})

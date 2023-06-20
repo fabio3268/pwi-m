@@ -24,6 +24,22 @@ document.querySelector("#div01").addEventListener("click", () => {
     console.log("Oi div 01");
 });
 
+ulItems.addEventListener("click", (event) => {
+    console.log(event.target.tagName);
+    if(event.target.tagName === "LI"){
+        event.target.remove();
+    }
+    event.stopPropagation();
+});
+
+btnAdd.addEventListener('click', (event) => {
+    if(event.target.tagName === "BUTTON"){
+        const liNewItem = document.createElement("li");
+        liNewItem.textContent = inputItem.value;
+        ulItems.insertAdjacentElement("beforeend", liNewItem);
+    }
+    event.stopPropagation();
+});
 
 
 

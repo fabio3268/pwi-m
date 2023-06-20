@@ -1,10 +1,10 @@
+const form = document.querySelector("form");
 let users = [];
 const user = {
     name : "",
     email : "",
     password : ""
 };
-const form = document.querySelector("form");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();

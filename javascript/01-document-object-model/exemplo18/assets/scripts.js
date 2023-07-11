@@ -1,17 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*document.querySelectorAll("#menu .item").forEach( (e,i) => {
+document.querySelectorAll("#menu .item").forEach( (e,i) => {
     console.log(e,i);
     e.addEventListener("click", () => {
         const groups = document.querySelectorAll("#sub-menu .group");
@@ -33,4 +20,4 @@ document.querySelectorAll('#sub-menu .item').forEach((e,i) => {
         document.querySelector('#sub-menu .group.active').classList.remove('active');
         alert(`Abre link: ${e.innerHTML}`);
     });
-});*/
+});

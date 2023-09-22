@@ -11,10 +11,10 @@
         <h1>Login</h1>
         <form>
             <label for="email">E-mail:</label>
-            <input type="text" id="email" name="email" placeholder="Digite seu email">
+            <input type="text" id="email" value="fabiosantos@gmail.com" name="email" placeholder="Digite seu email">
 
             <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" placeholder="Digite sua senha">
+            <input type="password" value="214234" id="password" name="password" placeholder="Digite sua senha">
 
             <button type="submit">Entrar</button>
         </form>

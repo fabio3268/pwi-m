@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login Form</title>
+    <title>Lista Usuários</title>
     <link rel="stylesheet" href="assets/styles.css">
     <script src="assets/index-script.js" async></script>
 </head>
@@ -19,7 +19,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <!--<tr>
                 <td>1</td>
                 <td>João Silva</td>
                 <td>joao@example.com</td>
@@ -28,7 +28,7 @@
                 <td>2</td>
                 <td>Maria Souza</td>
                 <td>maria@example.com</td>
-            </tr>
+            </tr>-->
             <!-- Adicione mais linhas conforme necessário -->
             </tbody>
         </table>

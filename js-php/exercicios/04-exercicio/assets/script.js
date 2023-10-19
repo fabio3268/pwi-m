@@ -1,8 +1,12 @@
 import {getCategories} from "./functions.js";
 
-getCategories();
-
 const category = document.querySelector("#category");
+const categoryModal = document.querySelector("#category_id");
+
+getCategories(category);
+getCategories(categoryModal);
+
+
 category.addEventListener("change",() => {
     //console.log(category.value);
     // api/products-by-category.php?categoryId=2
@@ -58,7 +62,7 @@ productName.addEventListener("keyup", () => {
 const tableProducts = document.querySelector("table");
 
 // Seletor para a modal
-const modal = document.getElementById("edit-modal");
+const modal = document.querySelector("#edit-modal");
 
 // Seletor para o botão de fechar a modal
 const closeModalButton = document.querySelector(".close");
@@ -70,6 +74,23 @@ const editForm = document.getElementById("edit-form");
 function openModal(productId) {
     modal.style.display = "block";
     console.log(productId);
+    const urlProductGet = `api/product-get.php?idProduct=${productId}`;
+    const optionsProduct = {
+        method : 'get'
+    };
+    fetch(urlProductGet, optionsProduct).then((response) => {
+        response.json().then((product) => {
+            console.log(product);
+            const id = document.querySelector("#id");
+            id.value = product.id;
+            const name = document.querySelector("#name");
+            name.value = product.name;
+            const price = document.querySelector("#price");
+            price.value = product.price;
+            const category_id = document.querySelector("#category_id");
+            category_id.value = product.category_id;
+        })
+    });
 }
 
 // Fechar a modal ao clicar no botão de fechar
@@ -88,5 +109,6 @@ tableProducts.addEventListener("click", (event) => {
     // mostrar no console o id do produto cliacado
     //console.log(event.target.parentNode);
     //console.log(event.target.parentNode.getAttribute("data-id"));
+    //console.log(event.target.parentNode);
     openModal(event.target.parentNode.getAttribute("data-id"));
 });

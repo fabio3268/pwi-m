@@ -71,26 +71,8 @@ const closeModalButton = document.querySelector(".close");
 const editForm = document.getElementById("edit-form");
 
 // Função para abrir a modal com dados do produto (vai receber por parâmetro o id do produto)
-function openModal(productId) {
+function openModal() {
     modal.style.display = "block";
-    console.log(productId);
-    const urlProductGet = `api/product-get.php?idProduct=${productId}`;
-    const optionsProduct = {
-        method : 'get'
-    };
-    fetch(urlProductGet, optionsProduct).then((response) => {
-        response.json().then((product) => {
-            console.log(product);
-            const id = document.querySelector("#id");
-            id.value = product.id;
-            const name = document.querySelector("#name");
-            name.value = product.name;
-            const price = document.querySelector("#price");
-            price.value = product.price;
-            const category_id = document.querySelector("#category_id");
-            category_id.value = product.category_id;
-        })
-    });
 }
 
 // Fechar a modal ao clicar no botão de fechar
@@ -110,5 +92,48 @@ tableProducts.addEventListener("click", (event) => {
     //console.log(event.target.parentNode);
     //console.log(event.target.parentNode.getAttribute("data-id"));
     //console.log(event.target.parentNode);
-    openModal(event.target.parentNode.getAttribute("data-id"));
+
+    const productId = event.target.parentNode.getAttribute("data-id");
+
+    console.log(productId);
+    const urlProductGet = `api/product-get.php?idProduct=${productId}`;
+    const optionsProduct = {
+        method : 'get'
+    };
+    fetch(urlProductGet, optionsProduct).then((response) => {
+        response.json().then((product) => {
+            console.log(product);
+            const id = document.querySelector("#id");
+            id.value = product.id;
+            const name = document.querySelector("#name");
+            name.value = product.name;
+            const price = document.querySelector("#price");
+            price.value = product.price;
+            const category_id = document.querySelector("#category_id");
+            category_id.value = product.category_id;
+        })
+    });
+
+    openModal();
 });
+
+const formUpdateProduct = document.querySelector("#edit-form");
+
+formUpdateProduct.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const dataProduct = new FormData(formUpdateProduct);
+    const urlUpdate = "api/product-update.php";
+    const optionsUpdate = {
+        method: "post",
+        body: dataProduct
+    };
+
+    fetch(urlUpdate, optionsUpdate).then((response) => {
+        response.json().then((product) => {
+            console.log(product);
+        })
+    });
+
+});
+

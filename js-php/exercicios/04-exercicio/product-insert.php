@@ -14,10 +14,9 @@
         <label for="productName">Nome do Produto:</label>
         <input type="text" id="productName" name="productName">
         <label for="productPrice">Preço:</label>
-        <input type="number" id="productPrice" name="productPrice" step="0.01">
+        <input type="text" id="productPrice" name="productPrice">
         <label for="category">Categoria:</label>
         <select id="category" name="productCategory">
-            <option value="">Selecione uma Categoria</option>
         </select>
         <button type="submit">Adicionar Produto</button>
     </form>

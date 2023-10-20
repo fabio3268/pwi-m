@@ -35,5 +35,6 @@ tableBooks.addEventListener("click", (event) => {
 
     if(event.target.tagName === "BUTTON"){
         console.log(`Apagar: ${event.target.parentNode.parentNode.getAttribute("data-id")}`);
+        //event.target.parentNode.parentNode.remove();
     }
 });

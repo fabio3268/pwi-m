@@ -1,8 +1,9 @@
 import {getCategories} from "./functions.js";
 
-getCategories();
-
 const form = document.querySelector("#product-form");
+const selectCategories = document.querySelector("#category");
+
+getCategories(selectCategories);
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();

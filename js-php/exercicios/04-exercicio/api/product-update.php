@@ -13,11 +13,15 @@ if(in_array("",$post)){
     exit;
 }
 
-$query = "INSERT INTO products VALUES (NULL, :category_id, :name, :price)";
+$query = "UPDATE products 
+          SET category_id = :category_id, name = :name, price = :price
+          WHERE id = :id";
+
 $stmt = $conn->prepare($query);
-$stmt->bindParam("name", $post["productName"]);
-$stmt->bindParam("price",$post["productPrice"]);
-$stmt->bindParam("category_id",$post["productCategory"]);
+$stmt->bindParam("category_id", $post["category_id"]);
+$stmt->bindParam("name", $post["name"]);
+$stmt->bindParam("price", $post["price"]);
+$stmt->bindParam("id", $post["id"]);
 $stmt->execute();
 
 if($stmt->rowCount() != 1){
@@ -30,8 +34,8 @@ if($stmt->rowCount() != 1){
 }
 
 $response = [
-   "type" => "success",
-   "message" => "Produto cadastrado com sucesso!"
+    "type" => "success",
+    "message" => "Produto atualizado com sucesso!"
 ];
 
 echo json_encode($response);

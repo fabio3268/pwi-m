@@ -15,16 +15,16 @@ function openModal() {
 }
 
 // Fechar a modal ao clicar no botão de fechar
-closeModalButton.onclick = function() {
+closeModalButton.addEventListener("click", () => {
     modal.style.display = "none";
-};
+});
 
 // Fechar a modal quando o usuário clicar fora dela
-window.onclick = function(event) {
+window.addEventListener("click", (event) => {
     if (event.target === modal) {
         modal.style.display = "none";
     }
-};
+});
 
 tableBooks.addEventListener("click", (event) => {
 

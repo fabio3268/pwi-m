@@ -25,10 +25,10 @@ DROP TABLE IF EXISTS `authors`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `authors` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `birth_date` date NOT NULL,
-  PRIMARY KEY (`id`)
+                           `id` int NOT NULL AUTO_INCREMENT,
+                           `name` varchar(255) NOT NULL,
+                           `birth_date` date NOT NULL,
+                           PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -50,11 +50,11 @@ DROP TABLE IF EXISTS `books`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `books` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `author_id` int NOT NULL,
-  `category_id` int NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `price` double(10,2) NOT NULL DEFAULT '250.00',
+                         `id` int NOT NULL AUTO_INCREMENT,
+                         `author_id` int NOT NULL,
+                         `category_id` int NOT NULL,
+                         `title` varchar(255) NOT NULL,
+                         `price` double(10,2) NOT NULL DEFAULT '250.00',
   PRIMARY KEY (`id`),
   KEY `fk_books_authors_idx` (`author_id`),
   KEY `fk_books_categories1_idx` (`category_id`),
@@ -96,6 +96,31 @@ LOCK TABLES `categories` WRITE;
 INSERT INTO `categories` VALUES (1,'Ficção'),(2,'Romance'),(3,'Terror'),(4,'Aventura'),(5,'Mistério'),(6,'Sci-Fi'),(7,'História'),(8,'Autoajuda'),(9,'Biografia'),(10,'Fantasia');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -106,4 +131,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-11 18:43:01
+-- Dump completed on 2023-10-25 14:54:13

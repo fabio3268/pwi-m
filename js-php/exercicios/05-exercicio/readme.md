@@ -2,7 +2,7 @@
 
 ## Utilizando programação assíncrona com JavaScript e PHP
 
-O banco de dados está na pasta bd do repositório e se chama "db-book-store-tarde.sql". 
+O banco de dados está na pasta bd do repositório e se chama "db-book-store-manha.sql". 
 
 1) Os livros devem aparecer filtrados por Autor ou por Categoria;
 2) Ao clicar na linha de um livro, seus detalhes devem ser mostrados em um formulário para edição das informações;

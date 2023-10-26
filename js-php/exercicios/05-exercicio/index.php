@@ -11,9 +11,11 @@
     <div class="filter">
         <label for="category">Categoria:</label>
         <select id="category">
+            <option value="">Selecione uma categoria</option>
         </select>
         <label for="author">Autor:</label>
         <select id="author">
+            <option value="">Selecione um autor</option>
         </select>
         <label for="bookTitle">Título do Livro:</label>
         <input type="text" id="bookTitle">
@@ -28,12 +30,12 @@
         </tr>
         </thead>
         <tbody id="bookList">
-        <tr data-id="2">
+        <!--<tr data-id="2">
             <td>2</td>
             <td>Título</td>
             <td>Preço</td>
             <td><button>X</button></td>
-        </tr>
+        </tr>-->
         </tbody>
     </table>
 </div>

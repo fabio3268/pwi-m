@@ -1,8 +1,8 @@
 <?php
 
-$host = "mysql";
+$host = "mysql"; // na escola localhost
 $user = "root";
-$password = "asdf1234"; // trocar a senha
+$password = "asdf1234"; // na escola sem senha
 $database = "db_book_store_manha";
 $port = 3306;
 $options = [
@@ -11,12 +11,7 @@ $options = [
 ];
 
 try {
-    $conn = new PDO(
-        "mysql:host=$host;port=$port;dbname=$database",
-        $user,
-        $password,
-        $options
-    );
+    $conn = new PDO("mysql:host=$host;port=$port;dbname=$database", $user, $password, $options);
 } catch (PDOException $e) {
     echo "Erro de conexão: " . $e->getMessage();
 }

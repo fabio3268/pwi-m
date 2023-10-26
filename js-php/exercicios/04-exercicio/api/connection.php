@@ -1,10 +1,10 @@
 <?php
 
-$host = "localhost";
+$host = "mysql";
 $user = "root";
 $password = "asdf1234"; // trocar a senha
 $database = "db_book_store_manha";
-$port = 3310;
+$port = 3306;
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,

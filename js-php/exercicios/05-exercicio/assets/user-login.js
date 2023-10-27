@@ -13,7 +13,7 @@ form.addEventListener('submit', function (event) {
     fetch(url, options).then((response) => {
         response.json().then((data) => {
             console.log(data);
-            console.log(data.user.name, data.user.email);
+            //console.log(data.user.name, data.user.email);
         });
     });
 });

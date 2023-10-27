@@ -13,7 +13,9 @@ form.addEventListener("submit",  (event) => {
     fetch(url, options).then((response) => {
         response.json().then((user) => {
             console.log(user);
+            if(user.type == "error"){
+                document.querySelector("#message").textContent = user.message;
+            }
         });
     });
-
 });

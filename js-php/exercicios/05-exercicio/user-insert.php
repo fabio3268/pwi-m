@@ -19,6 +19,7 @@
         <input type="text" id="password" name="password">
         <button type="submit">Cadastrar</button>
     </form>
+    <div id="message"></div>
 </div>
 </body>
 </html>

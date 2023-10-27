@@ -42,7 +42,8 @@ if($stmt->rowCount() == 1){
     exit;
 }
 
-$query = "INSERT INTO users VALUES (NULL, :name, :email, :password)";
+$query = "INSERT INTO users 
+          VALUES (NULL, :name, :email, :password)";
 $stmt = $conn->prepare($query);
 $stmt->bindParam("name", $user["name"]);
 $stmt->bindParam("email",$user["email"]);

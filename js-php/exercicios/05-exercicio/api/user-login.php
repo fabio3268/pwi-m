@@ -6,8 +6,8 @@ require "connection.php";
 
 $user = filter_input_array(INPUT_POST);
 // Para fazer o teste de requisição
-//echo json_encode($user);
-//exit;
+// echo json_encode($user);
+// exit;
 
 if(in_array("",$user)){
     $response = [
@@ -41,7 +41,7 @@ if($stmt->rowCount() == 0){
     echo json_encode($response);
     exit;
 }
-
+// todas as informações do usuário
 $userDB = $stmt->fetch();
 
 // verificar se a senha está correta

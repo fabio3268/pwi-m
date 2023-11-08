@@ -12,11 +12,12 @@
     <h1>Login Usuário</h1>
     <form id="form-user-login">
         <label for="email">E-mail:</label>
-        <input type="text" id="email" name="email">
+        <input type="text" id="email" name="email" value="fabiosantos@ifsul.edu.br">
         <label for="password">Senha:</label>
-        <input type="text" id="password" name="password">
-        <button type="submit">Cadastrar</button>
+        <input type="text" id="password" name="password" value="12345678">
+        <button type="submit">Enviar</button>
     </form>
+    <div id="message"></div>
 </div>
 </body>
 </html>

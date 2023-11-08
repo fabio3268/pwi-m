@@ -58,7 +58,7 @@ if($stmt->rowCount() != 1) {
 }
 
 $response = [
-    "type" => "error",
+    "type" => "success",
     "message" => "Usuário cadastrado com sucesso!"
 ];
 

@@ -1,9 +1,18 @@
+<?php
+
+session_start();
+
+if(empty($_SESSION["admin"])){
+    header("Location: admin-login.php");
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>..:: Gerenciamento de Livros ::..</title>
-    <link rel="stylesheet" href="assets/styles.css">
-    <script type="module" src="assets/script.js" async></script>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script type="module" src="../assets/admin-script.js" async></script>
 </head>
 <body>
 <div class="container">
@@ -30,12 +39,12 @@
         </tr>
         </thead>
         <tbody id="bookList">
-        <!--<tr data-id="2">
+        <tr book-id="2">
             <td>2</td>
             <td>Título</td>
             <td>Preço</td>
             <td><button>X</button></td>
-        </tr>-->
+        </tr>
         </tbody>
     </table>
 </div>

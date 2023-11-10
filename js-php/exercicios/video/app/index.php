@@ -6,4 +6,7 @@ if(empty($_SESSION["user"])){
     header("Location: ../user-login.php");
 }
 
-var_dump($_SESSION["user"]);
+
+$user = $_SESSION["user"];
+
+var_dump($user->id);

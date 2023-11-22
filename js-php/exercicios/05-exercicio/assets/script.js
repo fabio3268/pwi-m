@@ -90,7 +90,7 @@ selectCategories.addEventListener("change", () => {
     const urlBooksByCategory = `api/books-by-category.php?category_id=${selectCategories.value}`;
     fetch(urlBooksByCategory, optionsGet).then((response) => {
         response.json().then((books) => {
-            //console.log(books);
+            console.log(books);
             const tableBooks = document.querySelector("#bookList");
             // limpa a tabela
             tableBooks.innerHTML = "";

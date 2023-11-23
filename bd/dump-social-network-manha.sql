@@ -19,10 +19,6 @@
 -- Table structure for table `categories`
 --
 
-CREATE SCHEMA IF NOT EXISTS `social_network_manha`;
-
-USE `social_network_manha`;
-
 DROP TABLE IF EXISTS `categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -86,7 +82,7 @@ CREATE TABLE `posts` (
                          KEY `fk_posts_users1_idx` (`user_id`),
                          CONSTRAINT `fk_posts_categories` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`),
                          CONSTRAINT `fk_posts_users1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,6 +91,7 @@ CREATE TABLE `posts` (
 
 LOCK TABLES `posts` WRITE;
 /*!40000 ALTER TABLE `posts` DISABLE KEYS */;
+INSERT INTO `posts` VALUES (1,'Fui dar uma caminhada no parque hoje.',1,1),(2,'Tive um ótimo jantar em família.',2,1),(3,'Terminei um grande projeto no trabalho.',3,1),(4,'Aproveitei uma noite de cinema com amigos.',1,2),(5,'A reunião de família foi incrível.',2,2),(6,'Promovido a posição sênior no trabalho.',3,2),(7,'Joguei futebol com amigos.',1,3),(8,'Comemorei o aniversário do meu filho.',2,3),(9,'O trabalho é desafiador, mas gratificante.',3,3),(10,'Fiz uma viagem de carro com amigos.',1,4),(11,'Tive um adorável piquenique em família.',2,4),(12,'Trabalhei até tarde para cumprir o prazo.',3,4),(13,'Participei do casamento de um amigo.',1,5),(14,'Passei um tempo de qualidade com a família.',2,5),(15,'Consegui um novo cliente no trabalho.',3,5),(16,'Tive uma noite divertida com amigos.',1,6),(17,'Cozinhei o jantar para a família.',2,6),(18,'O trabalho está me mantendo ocupado.',3,6),(19,'Fui fazer uma caminhada com amigos.',1,7),(20,'A noite de jogos em família foi divertida.',2,7),(21,'Participei de uma conferência de trabalho.',3,7),(22,'Joguei videogames com amigos.',1,8),(23,'Visitei os avós durante o fim de semana.',2,8),(24,'O projeto de trabalho foi um sucesso.',3,8),(25,'Assisti a uma partida de futebol com amigos.',1,9),(26,'Tive um churrasco em família.',2,9),(27,'A viagem de trabalho foi produtiva.',3,9),(28,'Fui a um concerto com amigos.',1,10),(29,'As férias em família foram incríveis.',2,10),(30,'O trabalho está indo muito bem.',3,10);
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -134,4 +131,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-21 14:45:51
+-- Dump completed on 2023-11-23 10:49:13

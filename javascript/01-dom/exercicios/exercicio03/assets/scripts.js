@@ -6,13 +6,15 @@ myTitle.textContent = "Disciplinas"; // conteúdo do h1
 myTitle.setAttribute("id","title"); // inclui o atributo id no h1
 const body = document.querySelector("body"); // seleciona o body
 console.log(myTitle);
-body.insertAdjacentElement("afterbegin",myTitle); // insere h1 no body
+//body.insertAdjacentElement("afterbegin",myTitle); // insere h1 no body
+body.appendChild(myTitle);
 
 
 const myDiv = document.createElement("div");
 myDiv.setAttribute("id","box");
 console.log(myDiv);
-body.insertAdjacentElement("beforeend",myDiv);
+//body.insertAdjacentElement("beforeend",myDiv);
+body.appendChild(myDiv);
 
 const spanTitle = document.createElement("span");
 spanTitle.setAttribute("id","title");

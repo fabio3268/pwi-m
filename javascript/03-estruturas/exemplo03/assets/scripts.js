@@ -10,9 +10,23 @@ for(var i = 0; i < numbers.length; i++){
     document.querySelector("#tableBody").appendChild(tr);
 
 }
+
+const searchInput = document.querySelector("#searchInput");
 const searchButton = document.querySelector("#searchButton");
+const message = document.querySelector(".message");
+
 searchButton.addEventListener("click", () => {
-    const searchInput = document.querySelector("#searchInput");
-    console.log(`Vou Procurar => ${searchInput.value}`);
+    //console.log(`Vou buscar ${searchInput.value}`);
+    var result = numbers.indexOf(parseInt(searchInput.value));
+
+    if(result == -1) {
+        message.textContent = "Número não encontrado";
+    } else {
+        message.textContent = `Número encontrado na posição ${result}`;
+    }
+
 });
+
+console.log(numbers.indexOf(100));
+
 

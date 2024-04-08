@@ -4,9 +4,9 @@ for(var c = 0; c <= 2; c++){
     console.log(report[0][c]);
 }
 
-for(var c = 0; c <= 2; c++){
+/*for(var c = 0; c <= 2; c++){
     console.log(report[1][c]);
-}
+}*/
 
 
 /*for(var c = 0; c <= 2; c++){

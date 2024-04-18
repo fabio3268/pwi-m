@@ -15,6 +15,7 @@ employeeList.push(employee);
 employeeList.push(employee);*!/
 console.table(employeeList);*/
 
+const employeeList = [];
 const buttonSend = document.querySelector("button");
 buttonSend.addEventListener("click", () => {
     const employee = {

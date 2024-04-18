@@ -40,3 +40,42 @@ body {
 .form-container button:hover {
     background-color: #45a049;
 }
+
+.employee button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f10719;
+    color: white;
+    cursor: pointer;
+}
+
+.employee button:hover {
+    background-color: #e18a92;
+}
+
+.list-employees {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.employee {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.employee span {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+}

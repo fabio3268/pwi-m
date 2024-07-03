@@ -40,3 +40,57 @@ body {
 .form-container button:hover {
     background-color: #45a049;
 }
+
+#myTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+    font-family: Arial, sans-serif;
+    min-width: 400px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+#myTable thead tr {
+    background-color: #4CAF50;
+    color: #ffffff;
+    text-align: left;
+}
+
+#myTable th,
+#myTable td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#myTable tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#myTable tbody tr:nth-of-type(even) {
+    background-color: #f4f4f4;
+}
+
+#myTable tbody tr:last-of-type {
+    border-bottom: 2px solid #4CAF50;
+}
+
+#myTable button {
+    color: white;
+    background-color: #f44336;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#myTable button:hover {
+    background-color: #da190b;
+    color: white;
+}

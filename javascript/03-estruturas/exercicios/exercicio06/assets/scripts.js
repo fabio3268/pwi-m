@@ -26,7 +26,9 @@ document.querySelector("tbody").addEventListener("click", (event) => {
         const deleteStudent = event.target.parentElement.parentElement.children[0].textContent;
         console.log(deleteStudent);
         // excluir da lista de objetos
+        
         event.target.parentElement.parentElement.remove();
+        console.table(studentsArray);
     }
 });
 

@@ -38,5 +38,38 @@ const studentsList = [
     {
         name: "Sophia",
         grade: 8.8
+    },
+    {
+        name: "Fábio",
+        grade: 9.9
     }
 ];
+
+studentsList.forEach((item) => {
+    const tbody = document.querySelector("tbody");
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>${item.name}</td><td>${item.grade}</td>`;
+    tbody.appendChild(row);
+});
+
+const averegeButton = document.querySelector("#calculate-average");
+averegeButton.addEventListener("click", () => {
+    console.log("Média");
+    let gradeSum = 0;
+    let maxGrade = 0;
+    let maxGradeIndex = -1;
+    studentsList.forEach((item, index) => {
+        gradeSum = gradeSum + item.grade;
+        if(item.grade > maxGrade){
+            maxGrade = item.grade;
+            maxGradeIndex = index;
+        }
+    });
+    console.log(gradeSum, studentsList.length, );
+    const result = document.querySelector("#average-div");
+    result.innerHTML = `
+        <div>Média: ${gradeSum / studentsList.length}</div>
+        <div>Aluno: ${studentsList[maxGradeIndex].name}</div>
+        <div>Nota: ${studentsList[maxGradeIndex].grade}</div>
+    `;
+});

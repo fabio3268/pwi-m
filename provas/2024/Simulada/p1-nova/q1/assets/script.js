@@ -45,8 +45,8 @@ const studentsList = [
     }
 ];
 
+const tbody = document.querySelector("tbody");
 studentsList.forEach((item) => {
-    const tbody = document.querySelector("tbody");
     const row = document.createElement("tr");
     row.innerHTML = `<td>${item.name}</td><td>${item.grade}</td>`;
     tbody.appendChild(row);

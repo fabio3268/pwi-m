@@ -17,13 +17,13 @@ const divListBox = document.querySelectorAll(".box");
 console.log(divListBox);
 
 
-divListBox.forEach((element, index) => {
+/*divListBox.forEach((element, index) => {
     element.innerHTML = `
         <div class="name">${plans[index].name}</div>
         <div class="price">${plans[index].price}</div>
         <div class="description">${plans[index].description}</div>
     `;
-});
+});*/
 
 divListBox.forEach((element) => {
     element.addEventListener("mouseenter", () => {

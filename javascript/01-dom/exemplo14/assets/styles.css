@@ -37,7 +37,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-.box .active {
+.box.active {
     background-color: #cd1717;
     border-color: #333333;
     box-shadow: none;

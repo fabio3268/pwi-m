@@ -10,10 +10,19 @@ h1 {
 
 .players {
     margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 .players label, .players input {
     margin: 5px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 5px;
 }
 
 #board {
@@ -45,4 +54,11 @@ h1 {
 
 #reset {
     margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
 }

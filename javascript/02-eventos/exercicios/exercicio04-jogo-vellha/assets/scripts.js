@@ -13,3 +13,10 @@ listCells.forEach((cell) => {
         contPlayer++;
     });
 });
+
+document.querySelector("#reset").addEventListener("click", () => {
+    contPlayer = 1;
+    listCells.forEach((cell) => {
+        cell.innerHTML = "";
+    })
+})
